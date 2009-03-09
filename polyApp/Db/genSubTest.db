@@ -1,0 +1,148 @@
+record(genSub, "genSubTest") {
+	field(SCAN, "1 second")
+	field(FTVA, "DOUBLE")
+	field(NOVA, "1024")
+        field(INAM, "")
+	field(SNAM, "genSubTest")
+}
+
+record(calc, "genInput")
+{
+	field(SCAN, ".1 second")
+	field(CALC, "(A>6.)?-6.:A+.01")
+	field(INPA, "genInput.VAL NPP NMS")
+}
+
+record(ai, "genOutput")
+{
+	field(SCAN, "Passive")
+	field(PREC, "5")
+	field(FLNK, "genInputInv PP")
+}
+
+record(calc, "genInputInv")
+{
+	field(SCAN, "Passive")
+	field(CALC, "A-3.5")
+	field(INPA, "genOutput")
+}
+
+record(ai, "genOutputInv")
+{
+	field(SCAN, "Passive")
+	field(PREC, "5")
+        field(FLNK, "genErr PP")
+}
+
+record(calc, "genErr")
+{
+	field(SCAN, "Passive")
+	field(PREC, "5")
+	field(CALC, "SQRT((B-A)*(B-A))")
+	field(INPA, "genInput NPP NMS")
+	field(INPB, "genOutputInv NPP NMS")
+	field(FLNK, "genSubSpin PP")
+}
+
+record(ai, "genSubSpin")
+{
+	field(SCAN, "Passive")
+	field(PREC, "5")
+	field(FLNK, "genSubInvSpin")
+}
+
+record(ai, "genSubInvSpin")
+{	
+	field(SCAN, "Passive")
+	field(PREC, "5")
+}
+
+record(compress, "genSubSpinWF")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubSpin CPP")
+	field(ALG, "Circular Buffer")
+	field(NSAM, "512")
+	field(EGU, "usec")
+}
+
+record(compress, "genSubSpinHigh")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubSpin CPP")
+	field(ALG, "N to 1 High Value")
+	field(NSAM, "1")
+	field(N, "512")
+}
+
+record(compress, "genSubSpinLow")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubSpin CPP")
+	field(ALG, "N to 1 Low Value")
+	field(NSAM, "1")
+	field(N, "512")
+}
+
+record(compress, "genSubSpinAve")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubSpin CPP")
+	field(ALG, "Average")
+	field(NSAM, "512")
+	field(N, "512")
+}
+
+record(compress, "genSubSpinMedian")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubSpin CPP")
+	field(ALG, "N to 1 Average")
+	field(NSAM, "512")
+	field(N, "512")
+}
+
+record(compress, "genSubInvSpinWF")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubInvSpin CPP")
+	field(ALG, "Circular Buffer")
+	field(NSAM, "512")
+	field(EGU, "usec")
+}
+
+record(compress, "genSubInvSpinHigh")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubInvSpin CPP")
+	field(ALG, "N to 1 High Value")
+	field(NSAM, "512")
+	field(N, "512")
+}
+
+record(compress, "genSubInvSpinLow")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubInvSpin CPP")
+	field(ALG, "N to 1 Low Value")
+	field(NSAM, "512")
+	field(N, "512")
+}
+
+record(compress, "genSubInvSpinAve")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubInvSpin CPP")
+	field(ALG, "Average")
+	field(NSAM, "512")
+	field(N, "512")
+}
+
+record(compress, "genSubInvSpinMedian")
+{
+	field(SCAN, "Passive")
+	field(INP, "genSubInvSpin CPP")
+	field(ALG, "N to 1 Median")
+	field(NSAM, "512")
+	field(N, "512")
+}

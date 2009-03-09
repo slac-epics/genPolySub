@@ -1,0 +1,710 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1385
+y 56
+w 1039
+h 896
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-18.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 533
+y 820
+w 500
+h 63
+lineColor index 14
+fill
+fillColor index 6
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+# Geometry
+x 14
+y 43
+w 514
+h 376
+# Appearance
+border
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-medium-r-18.0"
+# Operating Modes
+nPts 1300
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+showY2Axis
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 2
+xPv {
+  0 "genInput"
+  1 "genOutputInv"
+}
+yPv {
+  0 "genOutput"
+  1 "genOutput"
+}
+opMode {
+  0 "plot"
+  1 "plot"
+}
+useY2Axis {
+  1 1
+}
+xSigned {
+  0 1
+}
+plotColor {
+  0 index 21
+  1 index 26
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+# Geometry
+x 534
+y 43
+w 472
+h 374
+# Appearance
+border
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-medium-r-18.0"
+# Operating Modes
+nPts 1300
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisStyle "log10"
+yAxisSrc "AutoScale"
+yMin 1
+yMax 2
+# Y2 axis properties
+showY2Axis
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 1
+xPv {
+  0 "genInput"
+}
+yPv {
+  0 "genErr"
+}
+opMode {
+  0 "plot"
+}
+xSigned {
+  0 1
+}
+plotColor {
+  0 index 21
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+# Geometry
+x 15
+y 460
+w 514
+h 143
+# Appearance
+border
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-medium-r-18.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+showY2Axis
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 1
+yPv {
+  0 "genSubSpinWF"
+}
+plotColor {
+  0 index 21
+}
+endObjectProperties
+
+# (X-Y Graph)
+object xyGraphClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+# Geometry
+x 15
+y 640
+w 514
+h 143
+# Appearance
+border
+fgColor index 14
+bgColor index 0
+gridColor index 14
+font "helvetica-medium-r-18.0"
+# Operating Modes
+nPts 2
+# X axis properties
+showXAxis
+xAxisSrc "AutoScale"
+xMax 1
+# Y axis properties
+showYAxis
+yAxisSrc "AutoScale"
+yMax 1
+# Y2 axis properties
+showY2Axis
+y2AxisSrc "AutoScale"
+y2Max 1
+# Trace Properties
+numTraces 1
+yPv {
+  0 "genSubInvSpinWF"
+}
+ySigned {
+  0 3866716
+}
+plotColor {
+  0 index 25
+}
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 471
+w 97
+h 28
+controlPv "genSubSpinHigh"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 575
+w 97
+h 28
+controlPv "genSubSpinLow"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 523
+w 97
+h 28
+controlPv "genSubSpinAve"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 855
+y 529
+w 97
+h 28
+controlPv "genSubSpinMedian"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 627
+w 97
+h 28
+controlPv "genSubInvSpinHigh"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 730
+w 97
+h 28
+controlPv "genSubInvSpinLow"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 636
+y 679
+w 97
+h 28
+controlPv "genSubInvSpinAve"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 854
+y 675
+w 97
+h 28
+controlPv "genSubInvSpinMedian"
+displayMode "decimal"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 61
+y 19
+w 305
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Conversion(Blue) and Inversion(Red)"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 576
+y 19
+w 40
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Error"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 432
+w 267
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Spin Time for Conversion (usec)"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 56
+y 613
+w 248
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Spin Time for Inversion (usec)"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 555
+y 480
+w 38
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "High"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 555
+y 530
+w 68
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Average"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 555
+y 579
+w 35
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Low"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 557
+y 638
+w 38
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "High"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 557
+y 688
+w 68
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Average"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 557
+y 737
+w 35
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Low"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 776
+y 532
+w 60
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Median"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 785
+y 681
+w 60
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Median"
+}
+autoSize
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 677
+y 833
+w 99
+h 43
+controlPv "TEST:POSITION"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 923
+y 832
+w 99
+h 43
+controlPv "TEST:KDES"
+precision 3
+fgColor index 14
+fgAlarm
+bgColor index 0
+fill
+font "helvetica-medium-r-18.0"
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 554
+y 845
+w 97
+h 21
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "POSITION:"
+}
+autoSize
+endObjectProperties
+
+# (Text w. Reg. Exp.)
+object activeXRegTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 851
+y 843
+w 65
+h 25
+font "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Keff:"
+}
+autoSize
+endObjectProperties
+

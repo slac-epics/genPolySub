@@ -1,0 +1,71 @@
+#RELEASE Location of external products
+# Run "gnumake clean uninstall install" in the application
+# top directory each time this file is changed.
+
+# =============================================================
+# Define the top of the EPICS tree for your site.
+# We will build some tools/scripts that allow us to
+# change this easily when relocating software.
+# ==============================================================
+EPICS_SITE_TOP=/usr/local/lcls/epics
+
+# ==================================================================================
+#If using macro substitutions, point MSI at the binary:
+EXTENSIONS_MODULE_VERSION=extensions-R3-14-8-2
+MSI=$(EPICS_SITE_TOP)/extensions/$(EXTENSIONS_MODULE_VERSION)/bin/$(EPICS_HOST_ARCH)/msi
+
+# ==================================================================================
+
+# =============================================================
+# Define location of module tree with respect to
+# EPICS_SITE_TOP
+# =============================================================
+EPICS_MODULES=$(EPICS_SITE_TOP)/modules
+
+# ==============================================================
+# Define the version of EPICS BASE that you will use
+# =============================================================
+BASE_MODULE_VERSION=base-R3-14-8-2-lcls2
+
+# =============================================================
+# Define the version of modules needed by
+# IOC apps or other Support apps
+# =============================================================
+#SEQ_MODULE_VERSION=seq-R2-0-0
+#RESTORE_MODULE_VERSION=restore-R1-0-2
+#IOCADMIN_MODULE_VERSION=iocAdmin-R2-1-1
+#GENERALTIME_MODULE_VERSION=generalTime-R1-2-1
+#EVENT_MODULE_VERSION=event-R2-8-0
+#SSUBRECORD_MODULE_VERSION=sSubRecord-R1-0-1
+#IPAC_MODULE_VERSION=ipac-R2-8-lcls3
+#CAENADCV965_MODULE_VERSION=devl
+#MOTOR_MODULE_VERSION=Devl
+#HIGHLANDLVDTV550_MODULE_VERSION=highlandLVDTV550-R1-0-1
+#HYTECMOTOR8601_MODULE_VERSION=Devl
+#ASYN_MODULE_VERSION=asyn-R4-7-1-lcls4
+#VHSX0X_MODULE_VERSION=devl
+GENSUB_MODULE_VERSION=genSub-R1-6-lcls1
+#MISCUTILS_MODULE_VERSION=miscUtils-R1-0-1
+
+#SNCSEQ=$(EPICS_MODULES)/seq/$(SEQ_MODULE_VERSION)
+#RESTORE=$(EPICS_MODULES)/restore/$(RESTORE_MODULE_VERSION)
+#IOCADMIN=$(EPICS_MODULES)/iocAdmin/$(IOCADMIN_MODULE_VERSION)
+#GENERALTIME=$(EPICS_MODULES)/generalTime/$(GENERALTIME_MODULE_VERSION)
+#EVENT=$(EPICS_MODULES)/event/$(EVENT_MODULE_VERSION)
+#SSUBRECORD=$(EPICS_MODULES)/sSubRecord/$(SSUBRECORD_MODULE_VERSION)
+#IPAC=$(EPICS_MODULES)/ipac/$(IPAC_MODULE_VERSION)
+#CAENADCV965=$(EPICS_MODULES)/caenADCV965/$(CAENADCV965_MODULE_VERSION)
+#MOTOR=$(EPICS_MODULES)/motor/$(MOTOR_MODULE_VERSION)
+#HIGHLANDLVDTV550=$(EPICS_MODULES)/highlandLVDTV550/$(HIGHLANDLVDTV550_MODULE_VERSION)
+#HYTECMOTOR8601=$(EPICS_MODULES)/hytecMotor8601/$(HYTECMOTOR8601_MODULE_VERSION)
+#ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
+#VHSX0X=$(EPICS_MODULES)/VHSx0x/$(VHSX0X_MODULE_VERSION)
+GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)
+#MISCUTILS=$(EPICS_MODULES)/miscUtils/$(MISCUTILS_MODULE_VERSION)
+
+# =================================================================
+# Define EPICS_BASE
+# EPICS_BASE usually appears last so other apps can override stuff:
+# =================================================================
+EPICS_BASE=$(EPICS_SITE_TOP)/base/$(BASE_MODULE_VERSION)
+
