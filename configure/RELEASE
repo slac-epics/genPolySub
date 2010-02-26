@@ -13,13 +13,6 @@ include $(TOP)/RELEASE_SITE
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
-# ==================================================================================
-#If using macro substitutions, point MSI at the binary:
-EXTENSIONS_MODULE_VERSION=extensions-R3-14-10
-MSI=$(EPICS_SITE_TOP)/extensions/$(EXTENSIONS_MODULE_VERSION)/bin/$(EPICS_HOST_ARCH)/msi
-
-# ==================================================================================
-
 # =============================================================
 # Define location of module tree with respect to
 # EPICS_SITE_TOP
@@ -29,13 +22,14 @@ EPICS_MODULES=$(EPICS_SITE_TOP)/modules
 # ==============================================================
 # Define the version of EPICS BASE that you will use
 # =============================================================
-BASE_MODULE_VERSION=base-R3-14-10
+#BASE_MODULE_VERSION=base-R3-14-10
+BASE_MODULE_VERSION=base-R3-14-8-2-lcls5
 
 # =============================================================
 # Define the version of modules needed by
 # IOC apps or other Support apps
 # =============================================================
-GENSUB_MODULE_VERSION=devl-epics-3-14-10
+GENSUB_MODULE_VERSION=genSub-R1-6-lcls4
 
 # ============================================================
 #  Modules that this package depends on
