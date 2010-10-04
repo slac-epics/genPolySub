@@ -23,7 +23,7 @@
 #include <epicsExport.h>
 
 #define  MAX_INDEX 10
-#define  DEBUG
+#define  DEBUG_
 
 #ifdef DEBUG
 #ifdef _X86_
@@ -61,10 +61,10 @@ static long genPolyInit(genSubRecord *pgenSub)
 /* ==============================================================
     Function:    y(x) := SUM_{i=0_to_9} {C_i * x^i}
 
-    INPA: x  Input value
-    INPB ... INPK: C_i
-    INPL: Lower limit of Input value
-    INPM: Upper limit of Input value
+    INPA ... INPJ: C_i
+    INPT: Lower limit of Input value
+    INPU: Upper limit of Input value
+    INPS: x the input value
     OUTA, VALA: y Output LINK and Output vlaue
     OUTB, VALB: Vector of C_i, Output LINK and Output vlaue
     ============================================================= */
@@ -85,11 +85,11 @@ static long genPolySub(genSubRecord *pgenSub)
     double *spinTime = (double*)pgenSub->valc;
 #endif
 #endif
-    double llim     = *(double*)pgenSub->vall;
-    double ulim     = *(double*)pgenSub->valm;
+    double llim     = *(double*)pgenSub->t;
+    double ulim     = *(double*)pgenSub->u;
 
-    double val_inp     = *(double*)pgenSub->a;
-    double **coeff_inp = (double**) &pgenSub->b;
+    double val_inp     = *(double*)pgenSub->s;
+    double **coeff_inp = (double**) &pgenSub->a;
 
 #ifdef DEBUG
 #ifdef _X86_
@@ -99,7 +99,7 @@ static long genPolySub(genSubRecord *pgenSub)
 
     x = 1.; y = 0.;
 
-    if(llim != 0. && ulim != 0.) {
+    if(llim != 0. || ulim != 0.) {
         if(val_inp < llim) val_inp = llim;
         if(val_inp > ulim) val_inp = ulim;
     }
