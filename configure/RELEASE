@@ -2,14 +2,13 @@
 # Run "gnumake clean uninstall install" in the application
 # top directory each time this file is changed.
 
-include $(TOP)/RELEASE_SITE
-
 # =============================================================
 # Define the top of the EPICS tree for your site.
 # We will build some tools/scripts that allow us to
 # change this easily when relocating software.
 # ==============================================================
 #EPICS_SITE_TOP=/nfs/slac/g/lcls/build/epics
+EPICS_SITE_TOP=/usr/local/lcls/epics
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 

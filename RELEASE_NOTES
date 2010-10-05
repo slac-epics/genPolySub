@@ -3,6 +3,7 @@ Author: Kukhee Kim
 genPolySub-R1-2-0:  Built against rtems 4.9.4 and EPICS BASE:
                     base-R3-14-8-2-lcls6 
                     Minor changes that have been running in prod for a while (alarcon)
+                    Deleted RELESE_SITE
 
 genPolySub-R1-1-0:  Built against rtems 4.9.4 and EPICS BASE:
                     base-R3-14-8-2-lcls6 
