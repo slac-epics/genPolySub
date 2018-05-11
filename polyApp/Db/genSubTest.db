@@ -1,4 +1,4 @@
-record(genSub, "genSubTest") {
+record(aSub, "genSubTest") {
 	field(SCAN, "1 second")
 	field(FTVA, "DOUBLE")
 	field(NOVA, "1024")

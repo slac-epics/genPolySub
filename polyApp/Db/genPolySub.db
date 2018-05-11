@@ -1,4 +1,4 @@
-record(genSub, "$(NAME)") {
+record(aSub, "$(NAME)") {
 	field(SCAN, "$(SCAN)")
 	field(FLNK, "$(FLNK)")
 	field(INPA, "$(INPUT)")

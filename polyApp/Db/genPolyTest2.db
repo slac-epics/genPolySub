@@ -5,7 +5,7 @@
 
 
 
-record(genSub, TEST:CONVERSION) {
+record(aSub, TEST:CONVERSION) {
   field(SCAN, "Passive")
   field(FLNK, "TEST:KDES")
   field(INAM, "genPolyInit")
@@ -37,7 +37,7 @@ record(genSub, TEST:CONVERSION) {
 }
 
 
-record(genSub, TEST:INVCONVERSION) {
+record(aSub, TEST:INVCONVERSION) {
   field(SCAN, "Passive")
   field(FLNK, "TEST:POSITION")
   field(INAM, "genPolyInit")
