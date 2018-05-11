@@ -19,7 +19,7 @@
 #include <dbDefs.h>
 #include <dbCommon.h>
 #include <registryFunction.h>
-#include <genSubRecord.h>
+#include <aSubRecord.h>
 #include <epicsExport.h>
 
 #define  MAX_INDEX 10
@@ -39,7 +39,7 @@ __inline__ unsigned long long int rdtsc(void)
 #endif
 #endif
 
-static long genPolyInit(genSubRecord *pgenSub)
+static long genPolyInit(aSubRecord *pgenSub)
 {
 #ifdef DEBUG
 #ifdef _X86_
@@ -69,7 +69,7 @@ static long genPolyInit(genSubRecord *pgenSub)
     OUTB, VALB: Vector of C_i, Output LINK and Output vlaue
     ============================================================= */
 
-static long genPolySub(genSubRecord *pgenSub)
+static long genPolySub(aSubRecord *pgenSub)
 {
 #ifdef DEBUG
 #ifdef _X86_

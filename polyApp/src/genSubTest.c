@@ -8,10 +8,10 @@
 #include <dbDefs.h>
 #include <dbCommon.h>
 #include <registryFunction.h>
-#include <genSubRecord.h>
+#include <aSubRecord.h>
 #include <epicsExport.h>
 
-static long genSubTest(genSubRecord *pgenSub)
+static long genSubTest(aSubRecord *pgenSub)
 {
     double v[1024];
     static double cnt =0.;
