@@ -38,11 +38,10 @@ poly_DBD += base.dbd
 poly_DBD += xxxSupport.dbd
 poly_DBD += dbSubExample.dbd
 poly_DBD += polyHello.dbd
-poly_DBD += genSubRecord.dbd
 
 
 
-poly_DBD += genSubTestRoutine.dbd
+#poly_DBD += genSubTestRoutine.dbd
 poly_DBD += genPolySub.dbd
 
 # <name>_registerRecordDeviceDriver.cpp will be created from <name>.dbd
@@ -54,13 +53,12 @@ poly_SRCS_vxWorks += -nil-
 poly_SRCS += dbSubExample.c
 poly_SRCS += polyHello.c
 poly_SRCS += genSubTest.c
-#poly_SRCS += genPolySub.c
+poly_SRCS += genPolySub.c
 
 # The following adds support from base/src/vxWorks
 poly_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
 
 poly_LIBS += xxxSupport
-poly_LIBS += genSub
 poly_LIBS += genPolySub
 
 # NOTE: To build SNL programs, SNCSEQ must be defined
