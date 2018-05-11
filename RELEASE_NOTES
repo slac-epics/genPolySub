@@ -1,3 +1,8 @@
+R1.3.0:    Kukhee Kim, May 10, 2018
+           * switch to aSub record from genSub record
+           * build against epics base R3.15.5-1.0
+
+
 Author: Kukhee Kim
 
 genPolySub-R1-2-1:  Built against EPICS BASE: base-R3-14-12
