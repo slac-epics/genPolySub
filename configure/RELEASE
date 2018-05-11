@@ -18,12 +18,10 @@ EPICS_MODULES=$(MODULES_SITE_TOP)
 # Define the version of modules needed by
 # IOC apps or other Support apps
 # =============================================================
-GENSUB_MODULE_VERSION=genSub-R1-6-lcls6
 
 # ============================================================
 #  Modules that this package depends on
 # ============================================================
-GENSUB=$(EPICS_MODULES)/genSub/$(GENSUB_MODULE_VERSION)
 
 # =================================================================
 # Define EPICS_BASE
